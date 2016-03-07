@@ -2,25 +2,36 @@
 //  SettingsViewController.swift
 //  Facebook
 //
-//  Created by Timothy Lee on 8/3/14.
+//  Updated by Alicia Fremling 03/05/2016.
 //  Copyright (c) 2014 codepath. All rights reserved.
 //
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UIActionSheetDelegate {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var settingsImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        scrollView.contentSize = CGSizeMake(320, settingsImageView.image!.size.height)
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        scrollView.contentInset.top = 0
+        scrollView.contentInset.bottom = 50
+        scrollView.scrollIndicatorInsets.top = 0
+        scrollView.scrollIndicatorInsets.bottom = 50
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

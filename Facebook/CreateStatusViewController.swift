@@ -2,7 +2,7 @@
 //  CreateStatusViewController.swift
 //  Facebook
 //
-//  Created by Timothy Lee on 8/3/14.
+//  Updated by Alicia Fremling 03/05/2016.
 //  Copyright (c) 2014 codepath. All rights reserved.
 //
 
@@ -21,6 +21,9 @@ class CreateStatusViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onCancelButton(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
